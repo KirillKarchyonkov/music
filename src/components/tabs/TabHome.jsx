@@ -7,7 +7,8 @@ export default function TabHome({children})  {
             color: "#EE10B0",
             opacity: "0.6",
             margin: "24px auto",
-            textAlign: "center"
+            textAlign: "center",
+            textTransform: "uppercase"
             }}>
             {children}
         </h2>

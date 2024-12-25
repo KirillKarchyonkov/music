@@ -2,6 +2,12 @@ import AsideSectionTitle from "./components/aside/AsideSectionTitle"
 import AsideSectionButton from "./components/aside/AsideSectionButton/AsideSectionButton"
 import { useState } from "react"
 import TabHome from "./components/tabs/TabHome"
+import TabAlbums from "./components/tabs/TabAlbums"
+import TabDiscover from "./components/tabs/TabDiscover"
+import TabArtists from "./components/tabs/TabArtists"
+import TabFavorites from "./components/tabs/TabFavorites"
+import TabPlaylists from "./components/tabs/TabPlaylists"
+import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 
 
 function App() {
@@ -17,6 +23,7 @@ function App() {
   
   return (
     <>
+    <Router>
       <aside className="aside">
 
         <h1 className="aside__title">Melodies</h1>
@@ -77,8 +84,20 @@ function App() {
       </aside>
 
       <main className="main">
-          <TabHome>HOME</TabHome>
+        <Routes>
+
+          <Route path="/" element={<TabHome />} />
+          {asideSectionButtonActive === 'home' && <TabHome>home</TabHome>}
+          {asideSectionButtonActive === 'discover' && <TabDiscover>discover</TabDiscover>}
+          {asideSectionButtonActive === 'albums' && <TabAlbums>albums</TabAlbums>}
+          {asideSectionButtonActive === 'artists' && <TabArtists>artists</TabArtists>}
+          {asideSectionButtonActive === 'favorites' && <TabFavorites>favorites</TabFavorites>}
+          {asideSectionButtonActive === 'playlists' && <TabPlaylists>playlists</TabPlaylists>}
+
+        </Routes>
       </main>
+
+    </Router>
     </>
   )
 }
