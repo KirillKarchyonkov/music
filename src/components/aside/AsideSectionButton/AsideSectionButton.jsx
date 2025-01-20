@@ -1,15 +1,13 @@
-import './AsideSectionButton.css'
+import { NavLink } from "react-router-dom";
+import './AsideSectionButton.css';
 
-export default function AsideSectionButton({children, src, onClick, className})  {
-
-    return (
-        <button
-            type='button'
-            className={className}
-            onClick={onClick}
-        >
-            <img src={src} alt="#" />
-            <div>{children}</div>
-        </button>
-    )
+export default function AsideSectionButton({ children, src, ...props }) {
+  return (
+    <NavLink
+      {...props}
+    >
+        <img src={src} alt={children} />
+        <div>{children}</div>
+    </NavLink>
+  );
 }

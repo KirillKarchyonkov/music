@@ -39,11 +39,13 @@
  body {
   background-color: #181818;
   font-family: "Vazirmatn", serif;
+  min-height: 100vh;
  }
 
 #root {
     display: grid;
-    grid-template: 100vh / 270px 1fr;
+    grid-template: 1fr / 270px minmax(0, 1170px) 1fr;
+    height: 100%;
 }
 
  aside {

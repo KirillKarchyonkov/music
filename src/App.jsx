@@ -1,28 +1,20 @@
 import AsideSectionTitle from "./components/aside/AsideSectionTitle"
 import AsideSectionButton from "./components/aside/AsideSectionButton/AsideSectionButton"
-import { useState } from "react"
-import TabHome from "./components/tabs/TabHome"
+import TabHome from "./components/tabs/tabhome/TabHome"
 import TabAlbums from "./components/tabs/TabAlbums"
 import TabDiscover from "./components/tabs/TabDiscover"
 import TabArtists from "./components/tabs/TabArtists"
 import TabFavorites from "./components/tabs/TabFavorites"
 import TabPlaylists from "./components/tabs/TabPlaylists"
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 function App() {
 
-  const [asideSectionButtonActive, setAsideSectionButtonActive] = useState('home')
-
-  function handleClick(type) {
-
-    setAsideSectionButtonActive(type)
-
-  }
-
   
   return (
     <>
+    <Router>
       <aside className="aside">
 
         <h1 className="aside__title">Melodies</h1>
@@ -31,31 +23,31 @@ function App() {
 
           <AsideSectionTitle>Menu</AsideSectionTitle>
 
-          <AsideSectionButton 
+          <AsideSectionButton
+            to="/"
             src="./src/images/aside/home.svg" 
-            className={`section-item ${asideSectionButtonActive ===  'home' ? ' section-item-active' : ''}`}
-            onClick={() => handleClick('home')}
+            className={({ isActive }) => `section-item${isActive ? " section-item-active" : ""}`}
             >Home
           </AsideSectionButton>
 
           <AsideSectionButton
+            to="/discover"
             src="./src/images/aside/discover.svg"
-            className={`section-item ${asideSectionButtonActive === 'discover'? ' section-item-active' : ''}`}
-            onClick={() => handleClick('discover')}
+            className={({ isActive }) => `section-item${isActive ? " section-item-active" : ""}`}
             >Discover
           </AsideSectionButton>
 
-          <AsideSectionButton 
+          <AsideSectionButton
+            to="/albums"
             src="./src/images/aside/albums.svg"
-            className={`section-item ${asideSectionButtonActive === 'albums'? ' section-item-active' : ''}`}
-            onClick={() => handleClick('albums')}
+            className={({ isActive }) => `section-item${isActive ? " section-item-active" : ""}`}
             >Albums
           </AsideSectionButton>
 
-          <AsideSectionButton 
+          <AsideSectionButton
+            to="/artists" 
             src="./src/images/aside/artists.svg"
-            className={`section-item ${asideSectionButtonActive === 'artists'? ' section-item-active' : ''}`}
-            onClick={() => handleClick('artists')}
+            className={({ isActive }) => `section-item${isActive ? " section-item-active" : ""}`}
             >Artists
           </AsideSectionButton>
         </section>
@@ -64,17 +56,17 @@ function App() {
 
           <AsideSectionTitle>Playlist and favorite</AsideSectionTitle>
 
-          <AsideSectionButton 
+          <AsideSectionButton
+            to="/favorites"
             src="./src/images/aside/favorites.svg"
-            className={`section-item ${asideSectionButtonActive === 'favorites' ? ' section-item-active' : ''}`}
-            onClick={() => handleClick('favorites')}
+            className={({ isActive }) => `section-item${isActive ? " section-item-active" : ""}`}
             >Your favorites
           </AsideSectionButton>
 
           <AsideSectionButton 
+            to="/playlists"
             src="./src/images/aside/playlists.svg"
-            className={`section-item ${asideSectionButtonActive === 'playlists' ? ' section-item-active' : ''}`}
-            onClick={() => handleClick('playlists')}
+            className={({ isActive }) => `section-item${isActive ? " section-item-active" : ""}`}
             >Your playlists
           </AsideSectionButton>
 
@@ -83,15 +75,19 @@ function App() {
       </aside>
 
       <main className="main">
+        <Routes>
 
-          {asideSectionButtonActive === 'home' && <TabHome>home</TabHome>}
-          {asideSectionButtonActive === 'discover' && <TabDiscover>discover</TabDiscover>}
-          {asideSectionButtonActive === 'albums' && <TabAlbums>albums</TabAlbums>}
-          {asideSectionButtonActive === 'artists' && <TabArtists>artists</TabArtists>}
-          {asideSectionButtonActive === 'favorites' && <TabFavorites>favorites</TabFavorites>}
-          {asideSectionButtonActive === 'playlists' && <TabPlaylists>playlists</TabPlaylists>}
+          <Route path="/" element={<TabHome>home</TabHome>} />
+          <Route path="/discover" element={<TabDiscover>discover</TabDiscover>} />
+          <Route path="/albums" element={<TabAlbums>albums</TabAlbums>} />
+          <Route path="/artists" element={<TabArtists>artists</TabArtists>} />
+          <Route path="/favorites" element={<TabFavorites>favorites</TabFavorites>} />
+          <Route path="/playlists" element={<TabPlaylists>playlists</TabPlaylists>} />
 
+        </Routes>
       </main>
+
+    </Router>
     </>
   )
 }
