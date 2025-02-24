@@ -1,13 +1,14 @@
 import AsideSectionTitle from "./components/aside/AsideSectionTitle"
 import AsideSectionButton from "./components/aside/AsideSectionButton/AsideSectionButton"
-import TabHome from "./components/tabs/tabhome/TabHome"
+import TabHome from "./components/tabs/TabHome/TabHome"
 import TabAlbums from "./components/tabs/TabAlbums"
 import TabDiscover from "./components/tabs/TabDiscover"
 import TabArtists from "./components/tabs/TabArtists"
 import TabFavorites from "./components/tabs/TabFavorites"
 import TabPlaylists from "./components/tabs/TabPlaylists"
+import Callback from "./components/tabs/TabPlaylists"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import Callback from "./components/Callback/Callback"
 
 function App() {
 
@@ -15,6 +16,9 @@ function App() {
   return (
     <>
     <Router>
+
+      <Route path="/callback" element={<Callback />} />
+
       <aside className="aside">
 
         <h1 className="aside__title">Melodies</h1>

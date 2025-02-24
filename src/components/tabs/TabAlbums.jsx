@@ -12,5 +12,7 @@ export default function TabAlbums({children})  {
             }}>
             {children}
         </h2>
+
+        
     )
 }

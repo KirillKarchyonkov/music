@@ -6,7 +6,7 @@ export default function AsideSectionButton({ children, src, ...props }) {
     <NavLink
       {...props}
     >
-        <img src={src} alt={children} />
+        <img src={src} alt="#" />
         <div>{children}</div>
     </NavLink>
   );
