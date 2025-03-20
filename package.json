@@ -5,21 +5,18 @@
   "type": "module",
   "homepage": "https://kirillkarchyonkov.github.io/music",
   "scripts": {
-    "dev": "vite",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
 },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-modal": "^3.16.3",
-    "react-router-dom": "^7.1.1"
+    "react-router-dom": "^7.1.1",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

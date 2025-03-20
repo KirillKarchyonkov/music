@@ -7,17 +7,21 @@ import TabArtists from "./components/tabs/TabArtists"
 import TabFavorites from "./components/tabs/TabFavorites"
 import TabPlaylists from "./components/tabs/TabPlaylists"
 import Callback from "./components/tabs/TabPlaylists"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Callback from "./components/Callback/Callback"
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import home from './images/aside/home.svg'; 
+import discover from './images/aside/discover.svg';
+import albums from './images/aside/albums.svg';
+import artists from './images/aside/artists.svg';
+import favorites from './images/aside/favorites.svg';
+import playlists from './images/aside/playlists.svg';
+
 
 function App() {
 
-  
+    
   return (
     <>
-    <Router>
-
-      <Route path="/callback" element={<Callback />} />
+    <Router basename="/music">
 
       <aside className="aside">
 
@@ -29,28 +33,28 @@ function App() {
 
           <AsideSectionButton
             to="/"
-            src="./src/images/aside/home.svg" 
+            src={home}
             className={({ isActive }) => `section-item${isActive ? " section-item-active" : ""}`}
             >Home
           </AsideSectionButton>
 
           <AsideSectionButton
             to="/discover"
-            src="./src/images/aside/discover.svg"
+            src={discover}
             className={({ isActive }) => `section-item${isActive ? " section-item-active" : ""}`}
             >Discover
           </AsideSectionButton>
 
           <AsideSectionButton
             to="/albums"
-            src="./src/images/aside/albums.svg"
+            src={albums}
             className={({ isActive }) => `section-item${isActive ? " section-item-active" : ""}`}
             >Albums
           </AsideSectionButton>
 
           <AsideSectionButton
             to="/artists" 
-            src="./src/images/aside/artists.svg"
+            src={artists}
             className={({ isActive }) => `section-item${isActive ? " section-item-active" : ""}`}
             >Artists
           </AsideSectionButton>
@@ -62,14 +66,14 @@ function App() {
 
           <AsideSectionButton
             to="/favorites"
-            src="./src/images/aside/favorites.svg"
+            src={favorites}
             className={({ isActive }) => `section-item${isActive ? " section-item-active" : ""}`}
             >Your favorites
           </AsideSectionButton>
 
           <AsideSectionButton 
             to="/playlists"
-            src="./src/images/aside/playlists.svg"
+            src={playlists}
             className={({ isActive }) => `section-item${isActive ? " section-item-active" : ""}`}
             >Your playlists
           </AsideSectionButton>
@@ -87,6 +91,7 @@ function App() {
           <Route path="/artists" element={<TabArtists>artists</TabArtists>} />
           <Route path="/favorites" element={<TabFavorites>favorites</TabFavorites>} />
           <Route path="/playlists" element={<TabPlaylists>playlists</TabPlaylists>} />
+          <Route path="/callback" element={<Callback />} />
 
         </Routes>
       </main>
