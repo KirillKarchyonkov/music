@@ -1,7 +1,7 @@
 import './TabHome.css';
-import Subtitle from '../../GlobalComponents/Subtitle/Subtitle';
-import Playlist from '../../GlobalComponents/Playlist/Playlist';
-import PlaylistsConteiner from '../../GlobalComponents/PlaylistsConteiner/PlaylistsConteiner';
+import Subtitle from '../../GlobalComponents/Subtitle';
+import Playlist from '../../GlobalComponents/Playlist';
+import PlaylistsConteiner from '../../GlobalComponents/PlaylistsConteiner';
 import CustomModal from '../../GlobalComponents/CustomModal/CustomModal';
 import { /*useEffect,*/ useState } from 'react';
 import Whatever from '../../../images/GlobalComponents/Playlists/1.png'; 
@@ -14,7 +14,7 @@ import Lonliest from '../../../images/GlobalComponents/Playlists/5.png';
 const CLIENT_SECRET = "54a1c59c62a8459b90e668cfce518c96";*/}
 
 
-export default function TabHome({children})  {
+export default function TabHome()  {
 
     const [isOpenModal, setIsOpenModal] = useState(false)
 
