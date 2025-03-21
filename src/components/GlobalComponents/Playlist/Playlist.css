@@ -20,12 +20,12 @@
     font-size: 12px;
     color: #fff;
     opacity: 0.8;
-    margin: 10px 0 0 0;
+    margin: 5px 0 0 0;
 }
 
 .playlist__modal {
     background-color: transparent;
-    height: 150px;
+    height: 134px;
     width: 145px;
     transition: all 0.2s ease-in-out;
 }

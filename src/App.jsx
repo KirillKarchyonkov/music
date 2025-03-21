@@ -1,5 +1,5 @@
 import AsideSectionTitle from "./components/aside/AsideSectionTitle"
-import AsideSectionButton from "./components/aside/AsideSectionButton/AsideSectionButton"
+import AsideSectionButton from "./components/aside/AsideSectionButton"
 import TabHome from "./components/tabs/TabHome/TabHome"
 import TabAlbums from "./components/tabs/TabAlbums"
 import TabDiscover from "./components/tabs/TabDiscover"
@@ -34,28 +34,24 @@ function App() {
           <AsideSectionButton
             to="/"
             src={home}
-            className={({ isActive }) => `section-item${isActive ? " section-item-active" : ""}`}
             >Home
           </AsideSectionButton>
 
           <AsideSectionButton
             to="/discover"
             src={discover}
-            className={({ isActive }) => `section-item${isActive ? " section-item-active" : ""}`}
             >Discover
           </AsideSectionButton>
 
           <AsideSectionButton
             to="/albums"
             src={albums}
-            className={({ isActive }) => `section-item${isActive ? " section-item-active" : ""}`}
             >Albums
           </AsideSectionButton>
 
           <AsideSectionButton
             to="/artists" 
             src={artists}
-            className={({ isActive }) => `section-item${isActive ? " section-item-active" : ""}`}
             >Artists
           </AsideSectionButton>
         </section>

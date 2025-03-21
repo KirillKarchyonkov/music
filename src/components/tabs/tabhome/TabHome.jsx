@@ -3,15 +3,15 @@ import Subtitle from '../../GlobalComponents/Subtitle/Subtitle';
 import Playlist from '../../GlobalComponents/Playlist/Playlist';
 import PlaylistsConteiner from '../../GlobalComponents/PlaylistsConteiner/PlaylistsConteiner';
 import CustomModal from '../../GlobalComponents/CustomModal/CustomModal';
-import { useEffect, useState } from 'react';
+import { /*useEffect,*/ useState } from 'react';
 import Whatever from '../../../images/GlobalComponents/Playlists/1.png'; 
 import Skyfall from '../../../images/GlobalComponents/Playlists/2.png'; 
 import Superman from '../../../images/GlobalComponents/Playlists/3.png'; 
 import Softcore from '../../../images/GlobalComponents/Playlists/4.png'; 
 import Lonliest from '../../../images/GlobalComponents/Playlists/5.png'; 
 
-const CLIENT_ID = "2f41bd8bc5a348209ae24d4440062751";
-const CLIENT_SECRET = "54a1c59c62a8459b90e668cfce518c96";
+{/*const CLIENT_ID = "2f41bd8bc5a348209ae24d4440062751";
+const CLIENT_SECRET = "54a1c59c62a8459b90e668cfce518c96";*/}
 
 
 export default function TabHome({children})  {
@@ -20,7 +20,7 @@ export default function TabHome({children})  {
 
     document.body.style.overflow = isOpenModal ? 'hidden' : '';
 
-    const [accessToken, setAccessToken] = useState('');
+    {/*const [accessToken, setAccessToken] = useState('');
     const [albumData, setAlbumData] = useState([]);
 
     useEffect (() => { 
@@ -60,7 +60,7 @@ export default function TabHome({children})  {
         search()
          }, [accessToken])
         
-
+*/}
 
     return (
         <section className="home">
@@ -74,9 +74,10 @@ export default function TabHome({children})  {
             <Subtitle text={" Songs"}>Weekly Top</Subtitle>
             <PlaylistsConteiner>
                 <>
-                <Playlist src={Whatever} playlistName={albumData.tracks?.[0].name} artist="Imagne Dragons" 
+                {/*<Playlist src={Whatever} playlistName={albumData.tracks?.[0].name} artist="Imagne Dragons" 
                     onClick={() => setIsOpenModal(true)}
-                ></Playlist>
+                ></Playlist>*/}
+                <Playlist src={Whatever} playlistName="Whatever It Takes" artist="Imagne Dragons" onClick={() => setIsOpenModal(true)}></Playlist>
                 <CustomModal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)}></CustomModal>
                 <Playlist src={Skyfall} playlistName="Skyfall" artist="Adele"></Playlist>
                 <Playlist src={Superman} playlistName="Superman" artist="Eminiem"></Playlist>
