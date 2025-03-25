@@ -1,4 +1,8 @@
-export default function AsideSectionTitle({children})  {
+interface AsideSectionTitleProps {
+    children: React.ReactNode;
+}
+
+export default function AsideSectionTitle({children}: AsideSectionTitleProps)  {
 
     return (
         <h2 

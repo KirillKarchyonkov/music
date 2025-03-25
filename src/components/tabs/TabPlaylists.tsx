@@ -1,4 +1,8 @@
-export default function TabPlaylists({children})  {
+interface TabPlaylistsProps {
+    children: React.ReactNode;
+}
+
+export default function TabPlaylists({children}: TabPlaylistsProps)  {
 
     return (
         <h2 

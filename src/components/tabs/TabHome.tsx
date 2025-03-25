@@ -83,11 +83,11 @@ export default function TabHome()  {
                 ></Playlist>*/}
                 <Playlist src={Whatever} playlistName="Whatever It Takes" artist="Imagne Dragons" onClick={() => setIsOpenModal(true)}></Playlist>
                 <CustomModal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)}></CustomModal>
-                <Playlist src={Skyfall} playlistName="Skyfall" artist="Adele"></Playlist>
-                <Playlist src={Superman} playlistName="Superman" artist="Eminiem"></Playlist>
-                <Playlist src={Softcore} playlistName="Softcore" artist="The Neighberhood"></Playlist>
-                <Playlist src={Softcore} playlistName="Softcore" artist="The Neighberhood"></Playlist>
-                <Playlist src={Lonliest} playlistName="The Lonliest" artist="Måneskin"></Playlist>
+                <Playlist src={Skyfall} playlistName="Skyfall" artist="Adele" onClick={() => setIsOpenModal(true)}></Playlist>
+                <Playlist src={Superman} playlistName="Superman" artist="Eminiem" onClick={() => setIsOpenModal(true)}></Playlist>
+                <Playlist src={Softcore} playlistName="Softcore" artist="The Neighberhood" onClick={() => setIsOpenModal(true)}></Playlist>
+                <Playlist src={Softcore} playlistName="Softcore" artist="The Neighberhood" onClick={() => setIsOpenModal(true)}></Playlist>
+                <Playlist src={Lonliest} playlistName="The Lonliest" artist="Måneskin" onClick={() => setIsOpenModal(true)}></Playlist>
                 </>
             </PlaylistsConteiner>
             
