@@ -7,7 +7,8 @@ import Whatever from '../../images/GlobalComponents/Playlists/1.png';
 import Skyfall from '../../images/GlobalComponents/Playlists/2.png'; 
 import Superman from '../../images/GlobalComponents/Playlists/3.png'; 
 import Softcore from '../../images/GlobalComponents/Playlists/4.png'; 
-import Lonliest from '../../images/GlobalComponents/Playlists/5.png'; 
+import Lonliest from '../../images/GlobalComponents/Playlists/5.png';
+import mainBg from '../../images/tabs/home/main.png';
 
 {/*const CLIENT_ID = "2f41bd8bc5a348209ae24d4440062751";
 const CLIENT_SECRET = "54a1c59c62a8459b90e668cfce518c96";*/}
@@ -64,7 +65,7 @@ export default function TabHome()  {
     return (
         <section className="w-full h-full pr-16">
             <section className="w-full h-auto pt-12 pl-6.25 relative">
-                <div className="bg-[url('./src/images/tabs/home/main.png')] bg-no-repeat bg-center bg-cover w-full pt-[56.25%] origin-top-left bg-gradient-to-r from-black/0 to-black/80 rounded-[25px]">
+                <div style={{backgroundImage: `url(${mainBg})`}} className="bg-no-repeat bg-center bg-cover w-full pt-[56.25%] origin-top-left bg-gradient-to-r from-black/0 to-black/80 rounded-[25px]">
                     <div className="absolute top-[22%] left-[6%]">
                         <h1 className="text-white leading-[1.5em] text-justify w-85 h-auto font-extrabold text-[40px]">All the <span className='text-[#EE10B0]'>Best Songs</span> in One Place</h1>
                         <p className="text-white leading-[1.5em] text-justify font-light text-xs w-83 h-19 mt-10">
