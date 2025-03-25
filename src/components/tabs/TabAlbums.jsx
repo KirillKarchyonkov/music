@@ -1,15 +1,9 @@
 export default function TabAlbums({children})  {
 
     return (
-        <h2 style={{
-            fontWeight: "600",
-            fontSize: "30px",
-            color: "#EE10B0",
-            opacity: "0.6",
-            margin: "24px auto",
-            textAlign: "center",
-            textTransform: "uppercase"
-            }}>
+        <h2
+            className="font-semibold text-3xl text-[#EE10B0] opacity-60 my-6 mx-auto text-center uppercase"
+            >
             {children}
         </h2>
 

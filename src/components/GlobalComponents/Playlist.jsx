@@ -1,5 +1,3 @@
-//import './Playlist.css';
-
 export default function Playlist({src, playlistName, artist, onClick}) {
 
     return (
@@ -8,7 +6,7 @@ export default function Playlist({src, playlistName, artist, onClick}) {
                 <img className='block' src={src} alt="#" />
             </button>
             <h3 className='playlist__name font-medium text-base text-white mt-2'>{playlistName}</h3>
-            <h4 className='playlist__artist font-light text-xs text-white/80 mt-[5px]'>{artist}</h4>
+            <h4 className='playlist__artist font-light text-xs text-white opacity-80 mt-[5px]'>{artist}</h4>
         </section>
     )
 }

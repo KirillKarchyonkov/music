@@ -1,14 +1,13 @@
-import './TabHome.css';
-import Subtitle from '../../GlobalComponents/Subtitle';
-import Playlist from '../../GlobalComponents/Playlist';
-import PlaylistsConteiner from '../../GlobalComponents/PlaylistsConteiner';
-import CustomModal from '../../GlobalComponents/CustomModal/CustomModal';
+import Subtitle from '../GlobalComponents/Subtitle';
+import Playlist from '../GlobalComponents/Playlist';
+import PlaylistsConteiner from '../GlobalComponents/PlaylistsConteiner';
+import CustomModal from '../GlobalComponents/CustomModal/CustomModal';
 import { /*useEffect,*/ useState } from 'react';
-import Whatever from '../../../images/GlobalComponents/Playlists/1.png'; 
-import Skyfall from '../../../images/GlobalComponents/Playlists/2.png'; 
-import Superman from '../../../images/GlobalComponents/Playlists/3.png'; 
-import Softcore from '../../../images/GlobalComponents/Playlists/4.png'; 
-import Lonliest from '../../../images/GlobalComponents/Playlists/5.png'; 
+import Whatever from '../../images/GlobalComponents/Playlists/1.png'; 
+import Skyfall from '../../images/GlobalComponents/Playlists/2.png'; 
+import Superman from '../../images/GlobalComponents/Playlists/3.png'; 
+import Softcore from '../../images/GlobalComponents/Playlists/4.png'; 
+import Lonliest from '../../images/GlobalComponents/Playlists/5.png'; 
 
 {/*const CLIENT_ID = "2f41bd8bc5a348209ae24d4440062751";
 const CLIENT_SECRET = "54a1c59c62a8459b90e668cfce518c96";*/}
@@ -63,14 +62,18 @@ export default function TabHome()  {
 */}
 
     return (
-        <section className="home">
-            <div className="home__background-image">
-                <h1 className="home__title">All the <span>Best Songs</span> in One Place</h1>
-                <p className="home__info">
-                    On our website, you can access an amazing collection of popular and new songs. Stream your favorite tracks in high quality and enjoy without interruptions. Whatever your taste in music, we have it all for you!
-                </p>
-                <button className="home__create-playlist">Create Playlist</button>
-            </div>
+        <section className="w-full h-full pr-16">
+            <section className="w-full h-auto pt-12 pl-6.25 relative">
+                <div className="bg-[url('./src/images/tabs/home/main.png')] bg-no-repeat bg-center bg-cover w-full pt-[56.25%] origin-top-left bg-gradient-to-r from-black/0 to-black/80 rounded-[25px]">
+                    <div className="absolute top-[22%] left-[6%]">
+                        <h1 className="text-white leading-[1.5em] text-justify w-85 h-auto font-extrabold text-[40px]">All the <span className='text-[#EE10B0]'>Best Songs</span> in One Place</h1>
+                        <p className="text-white leading-[1.5em] text-justify font-light text-xs w-83 h-19 mt-10">
+                            On our website, you can access an amazing collection of popular and new songs. Stream your favorite tracks in high quality and enjoy without interruptions. Whatever your taste in music, we have it all for you!
+                        </p>
+                        <button className="w-[147px] h-10 bg-[#EE10B0] rounded-sm font-medium text-base text-center text-white mt-8">Create Playlist</button>
+                    </div>
+                </div>
+            </section>
             <Subtitle text={" Songs"}>Weekly Top</Subtitle>
             <PlaylistsConteiner>
                 <>
