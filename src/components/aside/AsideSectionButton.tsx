@@ -1,9 +1,15 @@
 import { NavLink } from "react-router-dom";
 
-export default function AsideSectionButton({ children, src, ...props }) {
+interface AsideSectionTitleProps {
+  children: React.ReactNode;
+  src: string;
+  to: string;
+}
+
+export default function AsideSectionButton({ children, src, to }: AsideSectionTitleProps) {
   return (
     <NavLink
-      {...props}
+      to={to}
       className={({ isActive }) =>
         `flex items-center justify-start my-6 w-[174px] ${
           isActive

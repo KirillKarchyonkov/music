@@ -1,4 +1,9 @@
-export default function Subtitle({children, text}) {
+interface SubtitleProps {
+    children: React.ReactNode;
+    text: string;
+}
+
+export default function Subtitle({children, text}: SubtitleProps) {
 
     return (
         <h2 

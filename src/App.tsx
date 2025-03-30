@@ -6,7 +6,6 @@ import TabDiscover from "./components/tabs/TabDiscover"
 import TabArtists from "./components/tabs/TabArtists"
 import TabFavorites from "./components/tabs/TabFavorites"
 import TabPlaylists from "./components/tabs/TabPlaylists"
-import Callback from "./components/tabs/TabPlaylists"
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import home from './images/aside/home.svg'; 
 import discover from './images/aside/discover.svg';
@@ -79,13 +78,12 @@ function App() {
       <main className="grid-area-[1/2/1/3] h-full">
         <Routes>
 
-          <Route path="/" element={<TabHome>home</TabHome>} />
+          <Route path="/" element={<TabHome></TabHome>} />
           <Route path="/discover" element={<TabDiscover>discover</TabDiscover>} />
           <Route path="/albums" element={<TabAlbums>albums</TabAlbums>} />
           <Route path="/artists" element={<TabArtists>artists</TabArtists>} />
           <Route path="/favorites" element={<TabFavorites>favorites</TabFavorites>} />
           <Route path="/playlists" element={<TabPlaylists>playlists</TabPlaylists>} />
-          <Route path="/callback" element={<Callback />} />
 
         </Routes>
       </main>

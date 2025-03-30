@@ -1,7 +1,12 @@
 import './CustomModal.css';
 import Modal from "react-modal";
 
-export default function CustomModal({isOpen, onClose/*, submitButton, children*/}) {
+interface CustomModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export default function CustomModal({isOpen, onClose}: CustomModalProps) {
 
     return (
       <Modal

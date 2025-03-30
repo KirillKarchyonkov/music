@@ -1,5 +1,8 @@
+interface PlaylistsConteinerProps {
+    children: React.ReactNode;
+}
 
-export default function PlaylistsConteiner({children}) {
+export default function PlaylistsConteiner({children}: PlaylistsConteinerProps) {
 
     return (
         <section 

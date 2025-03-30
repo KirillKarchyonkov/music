@@ -1,4 +1,8 @@
-export default function TabFavorites({children})  {
+interface TabFavoritesProps {
+    children: React.ReactNode;
+}
+
+export default function TabFavorites({children}: TabFavoritesProps)  {
 
     return (
         <h2 

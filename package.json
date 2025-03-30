@@ -11,7 +11,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "start": "react-scripts start",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -23,13 +23,13 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-modal": "^3.16.3",
-    "react-router-dom": "^7.1.1",
-    "react-scripts": "^5.0.1"
+    "react-router-dom": "^7.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
-    "@types/react": "^18.3.17",
+    "@types/react": "^18.3.20",
     "@types/react-dom": "^18.3.5",
+    "@types/react-modal": "^3.16.3",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.21",
     "eslint": "^8.57.1",
@@ -40,6 +40,7 @@
     "globals": "^15.13.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.0.15",
-    "vite": "^6.0.3"
+    "typescript": "^5.8.2",
+    "vite": "^6.2.3"
   }
 }

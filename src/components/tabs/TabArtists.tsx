@@ -1,4 +1,8 @@
-export default function TabArtists({children})  {
+interface TabArtistsProps {
+    children: React.ReactNode;
+}
+
+export default function TabArtists({children}: TabArtistsProps)  {
 
     return (
         <h2 
