@@ -2,7 +2,7 @@ import Subtitle from '../GlobalComponents/Subtitle';
 import Playlist from '../GlobalComponents/Playlist';
 import PlaylistsConteiner from '../GlobalComponents/PlaylistsConteiner';
 import CustomModal from '../GlobalComponents/CustomModal/CustomModal';
-import { /*useEffect,*/ useState } from 'react';
+import { useState } from 'react';
 import Whatever from '../../images/GlobalComponents/Playlists/1.png'; 
 import Skyfall from '../../images/GlobalComponents/Playlists/2.png'; 
 import Superman from '../../images/GlobalComponents/Playlists/3.png'; 
@@ -85,7 +85,6 @@ export default function TabHome()  {
                 <CustomModal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)}></CustomModal>
                 <Playlist src={Skyfall} playlistName="Skyfall" artist="Adele" onClick={() => setIsOpenModal(true)}></Playlist>
                 <Playlist src={Superman} playlistName="Superman" artist="Eminiem" onClick={() => setIsOpenModal(true)}></Playlist>
-                <Playlist src={Softcore} playlistName="Softcore" artist="The Neighberhood" onClick={() => setIsOpenModal(true)}></Playlist>
                 <Playlist src={Softcore} playlistName="Softcore" artist="The Neighberhood" onClick={() => setIsOpenModal(true)}></Playlist>
                 <Playlist src={Lonliest} playlistName="The Lonliest" artist="Måneskin" onClick={() => setIsOpenModal(true)}></Playlist>
                 </>
